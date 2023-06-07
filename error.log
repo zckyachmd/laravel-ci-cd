@@ -508,3 +508,173 @@
 
  [ERROR] Found 89 errors                                                                                                
 
+ ------ ------------------------------------------------------------------------------------------------------------ 
+  Line   app/Http/Controllers/MainController.php                                                                     
+ ------ ------------------------------------------------------------------------------------------------------------ 
+  :18    Parameter $video of method App\Http\Controllers\MainController::index() has invalid type App\Models\Video.  
+  :18    Parameter $video of method App\Http\Controllers\MainController::index() has invalid type App\Models\Video.  
+  :21    Call to method getTrends() on an unknown class App\Models\Video.                                            
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                                         
+ ------ ------------------------------------------------------------------------------------------------------------ 
+
+ ------ ----------------------------------------------------------------------------------------------------------------------- 
+  Line   app/Http/Controllers/Panel/AuthController.php                                                                          
+ ------ ----------------------------------------------------------------------------------------------------------------------- 
+  :18    Property App\Http\Controllers\Panel\AuthController::$callbackUrl has no type specified.                                
+  :18    Property App\Http\Controllers\Panel\AuthController::$consumerKey has no type specified.                                
+  :18    Property App\Http\Controllers\Panel\AuthController::$consumerSecret has no type specified.                             
+  :64    Instantiated class Abraham\TwitterOAuth\TwitterOAuth not found.                                                        
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                                                    
+  :65    Call to method oauth() on an unknown class Abraham\TwitterOAuth\TwitterOAuth.                                          
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                                                    
+  :74    Call to method url() on an unknown class Abraham\TwitterOAuth\TwitterOAuth.                                            
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                                                    
+  :77    Left side of || is always true.                                                                                        
+  :77    Right side of || is always true.                                                                                       
+  :95    Parameter $config of method App\Http\Controllers\Panel\AuthController::callback() has invalid type App\Models\Config.  
+  :95    Parameter $config of method App\Http\Controllers\Panel\AuthController::callback() has invalid type App\Models\Config.  
+  :95    Parameter $cookieUser of method App\Http\Controllers\Panel\AuthController::callback() has invalid type                 
+         App\Models\CookieUser.                                                                                                 
+  :95    Parameter $cookieUser of method App\Http\Controllers\Panel\AuthController::callback() has invalid type                 
+         App\Models\CookieUser.                                                                                                 
+  :101   Cannot access offset 'oauth_token' on mixed.                                                                           
+  :102   Cannot access offset 'oauth_token_secret' on mixed.                                                                    
+  :115   Instantiated class Abraham\TwitterOAuth\TwitterOAuth not found.                                                        
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                                                    
+  :116   Call to method oauth() on an unknown class Abraham\TwitterOAuth\TwitterOAuth.                                          
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                                                    
+  :119   Call to method getLastHttpCode() on an unknown class Abraham\TwitterOAuth\TwitterOAuth.                                
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                                                    
+  :135   Call to method where() on an unknown class App\Models\Config.                                                          
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                                                    
+  :138   Left side of || is always true.                                                                                        
+  :138   Right side of || is always true.                                                                                       
+  :157   Cannot access property $id on App\Models\User|null.                                                                    
+  :163   Call to method updateOrCreate() on an unknown class App\Models\CookieUser.                                             
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                                                    
+  :183   Left side of || is always true.                                                                                        
+  :183   Right side of || is always true.                                                                                       
+  :200   Parameter $cookieUser of method App\Http\Controllers\Panel\AuthController::logout() has invalid type                   
+         App\Models\CookieUser.                                                                                                 
+  :200   Parameter $cookieUser of method App\Http\Controllers\Panel\AuthController::logout() has invalid type                   
+         App\Models\CookieUser.                                                                                                 
+  :203   Call to method where() on an unknown class App\Models\CookieUser.                                                      
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                                                    
+  :203   Cannot access offset 'id' on mixed.                                                                                    
+ ------ ----------------------------------------------------------------------------------------------------------------------- 
+
+ ------ ------------------------------------------------------------------------------------- 
+  Line   app/Http/Controllers/Panel/DashboardController.php                                   
+ ------ ------------------------------------------------------------------------------------- 
+  :34    Call to static method whereDate() on an unknown class App\Models\Video.              
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                  
+  :35    Call to static method sum() on an unknown class App\Models\DownloadLog.              
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                  
+  :36    Call to static method count() on an unknown class App\Models\Video.                  
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                  
+  :40    Call to static method formatNumberShorten() on an unknown class App\Helpers\Custom.  
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                  
+  :41    Call to static method formatNumberShorten() on an unknown class App\Helpers\Custom.  
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                  
+  :42    Call to static method formatNumberShorten() on an unknown class App\Helpers\Custom.  
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                  
+  :43    Call to static method formatNumberShorten() on an unknown class App\Helpers\Custom.  
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                  
+ ------ ------------------------------------------------------------------------------------- 
+
+ ------ ------------------------------------------------------------------------------------------------------------------ 
+  Line   app/Http/Controllers/SitemapController.php                                                                        
+ ------ ------------------------------------------------------------------------------------------------------------------ 
+  :15    PHPDoc tag @return with type Illuminate\View\View is incompatible with native type Illuminate\Http\Response.      
+  :15    Parameter $video of method App\Http\Controllers\SitemapController::__invoke() has invalid type App\Models\Video.  
+  :17    Call to method select() on an unknown class App\Models\Video.                                                     
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                                               
+ ------ ------------------------------------------------------------------------------------------------------------------ 
+
+ ------ -------------------------------------------------------------------------------------------------------------------------------------------- 
+  Line   app/Http/Controllers/Video/VideoController.php                                                                                              
+ ------ -------------------------------------------------------------------------------------------------------------------------------------------- 
+  :29    Parameter $videoModel of method App\Http\Controllers\Video\VideoController::search() has invalid type App\Models\Video.                     
+  :42    Parameter #3 $subject of function str_replace expects array|string, mixed given.                                                            
+  :51    Parameter #2 $subject of function preg_match expects string, mixed given.                                                                   
+  :53    Parameter #3 $subject of function str_replace expects array|string, mixed given.                                                            
+  :62    Parameter #1 $url of function parse_url expects string, mixed given.                                                                        
+  :63    Parameter #2 $string of function explode expects string, string|false|null given.                                                           
+  :75    Call to method join() on an unknown class App\Models\Video.                                                                                 
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                                                                         
+  :86    Call to static method get() on an unknown class App\Services\CredentialService.                                                             
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                                                                         
+  :89    Call to static method saveVideo() on an unknown class App\Helpers\Twitter.                                                                  
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                                                                         
+  :95    Parameter #2 ...$arrays of function array_merge expects array, mixed given.                                                                 
+  :99    Negated boolean expression is always false.                                                                                                 
+         💡 Because the type is coming from a PHPDoc, you can turn off this check by setting                                                         
+            treatPhpDocTypesAsCertain: false in your phpstan.neon.                                                                                   
+  :104   Call to method getVideoList() on an unknown class App\Models\Video.                                                                         
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                                                                         
+  :112   Parameter #1 $value of function count expects array|Countable, mixed given.                                                                 
+  :147   Parameter $video of method App\Http\Controllers\Video\VideoController::retrieve() has invalid type App\Models\Video.                        
+  :147   Parameter $video of method App\Http\Controllers\Video\VideoController::retrieve() has invalid type App\Models\Video.                        
+  :150   Call to method join() on an unknown class App\Models\Video.                                                                                 
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                                                                         
+  :168   Parameter #2 ...$arrays of function array_merge expects array, mixed given.                                                                 
+  :172   Call to method getVideoList() on an unknown class App\Models\Video.                                                                         
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                                                                         
+  :197   Parameter $video of method App\Http\Controllers\Video\VideoController::video() has invalid type App\Models\Video.                           
+  :197   Parameter $video of method App\Http\Controllers\Video\VideoController::video() has invalid type App\Models\Video.                           
+  :200   Call to method where() on an unknown class App\Models\Video.                                                                                
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                                                                         
+  :217   Call to method getVideoList() on an unknown class App\Models\Video.                                                                         
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                                                                         
+  :230   Left side of || is always true.                                                                                                             
+  :230   Right side of || is always true.                                                                                                            
+  :240   Call to static method select() on an unknown class App\Models\Config.                                                                       
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                                                                         
+  :252   Method App\Http\Controllers\Video\VideoController::download() has invalid return type                                                       
+         App\Http\Controllers\Video\Illuminate\Http\RedirectResponse.                                                                                
+  :252   Method App\Http\Controllers\Video\VideoController::download() has invalid return type                                                       
+         App\Http\Controllers\Video\Symfony\Component\HttpFoundation\BinaryFileResponse.                                                             
+  :252   PHPDoc tag @return with type                                                                                                                
+         App\Http\Controllers\Video\Illuminate\Http\RedirectResponse|App\Http\Controllers\Video\Symfony\Component\HttpFoundation\BinaryFileResponse  
+         is not subtype of native type Illuminate\Http\RedirectResponse|Symfony\Component\HttpFoundation\BinaryFileResponse.                         
+  :252   Parameter $downloadLog of method App\Http\Controllers\Video\VideoController::download() has invalid type                                    
+         App\Models\DownloadLog.                                                                                                                     
+  :252   Parameter $downloadLog of method App\Http\Controllers\Video\VideoController::download() has invalid type                                    
+         App\Models\DownloadLog.                                                                                                                     
+  :252   Parameter $video of method App\Http\Controllers\Video\VideoController::download() has invalid type App\Models\Video.                        
+  :252   Parameter $video of method App\Http\Controllers\Video\VideoController::download() has invalid type App\Models\Video.                        
+  :255   Call to method where() on an unknown class App\Models\Video.                                                                                
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                                                                         
+  :277   Parameter #2 $contents of method Illuminate\Filesystem\FilesystemAdapter::put() expects                                                     
+         Illuminate\Http\File|Illuminate\Http\UploadedFile|Psr\Http\Message\StreamInterface|resource|string, string|false given.                     
+  :281   Call to method where() on an unknown class App\Models\DownloadLog.                                                                          
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                                                                         
+  :287   Call to method create() on an unknown class App\Models\DownloadLog.                                                                         
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                                                                         
+  :291   Call to method where() on an unknown class App\Models\DownloadLog.                                                                          
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                                                                         
+  :307   Left side of || is always true.                                                                                                             
+  :307   Right side of || is always true.                                                                                                            
+ ------ -------------------------------------------------------------------------------------------------------------------------------------------- 
+
+ ------ ---------------------------------------------------------------------------------------------------------- 
+  Line   app/Http/Controllers/Video/VideoSystemController.php                                                      
+ ------ ---------------------------------------------------------------------------------------------------------- 
+  :21    Method App\Http\Controllers\Video\VideoSystemController::webhook() has invalid return type                
+         App\Http\Controllers\Video\abort.                                                                         
+  :21    Parameter $config of method App\Http\Controllers\Video\VideoSystemController::webhook() has invalid type  
+         App\Models\Config.                                                                                        
+  :21    Parameter $config of method App\Http\Controllers\Video\VideoSystemController::webhook() has invalid type  
+         App\Models\Config.                                                                                        
+  :30    Call to method updateOrCreate() on an unknown class App\Models\Config.                                    
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                                       
+  :36    Parameter #2 $data of function hash_hmac expects string, mixed given.                                     
+  :36    Parameter #3 $key of function hash_hmac expects string, mixed given.                                      
+  :49    Left side of || is always true.                                                                           
+  :49    Right side of || is always true.                                                                          
+  :66    Instantiated class App\Jobs\Webhook not found.                                                            
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                                       
+ ------ ---------------------------------------------------------------------------------------------------------- 
+
+ [ERROR] Found 89 errors                                                                                                
+
