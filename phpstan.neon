@@ -10,11 +10,6 @@ parameters:
         - ./app
         - ./tests
 
-    ignoreErrors:
-        - '#PHPDoc tag @var#'
-        - '#Unsafe usage of new static\(\)#'
-        - '#Call to an undefined method (.+)::(.+)\(\)#'
-
     parallel:
         maximumNumberOfProcesses: 4
 
