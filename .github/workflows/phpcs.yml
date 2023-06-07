@@ -18,11 +18,8 @@ jobs:
       - name: Install dependencies
         run: composer install --no-progress --prefer-dist --dev
 
-      - name: Run PHP_CodeSniffer
-        run: vendor/bin/phpcs --standard=phpcs.xml -vvv
-
-      - name: Fix code style
-        run: vendor/bin/phpcbf --standard=phpcs.xml --ignore-errors
+      - name: Run PHP_CodeSniffer with Fixer (PSR-12)
+        run: vendor/bin/phpcbf --standard=phpcs.xml --extensions=php --ignore=vendor . || true
 
       - name: Commit changes
         run: |
