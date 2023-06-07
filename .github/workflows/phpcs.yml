@@ -19,4 +19,14 @@ jobs:
         run: composer install --no-progress --prefer-dist --dev
 
       - name: Run PHP_CodeSniffer
-        run: vendor/bin/phpcbf --standard=phpcs.xml
+        run: vendor/bin/phpcs --standard=phpcs.xml
+
+      - name: Fix code style
+        run: vendor/bin/phpcbf --standard=phpcs.xml --ignore-errors
+
+      - name: Commit changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add -A
+          git diff-index --quiet HEAD || git commit -m "Fix code style" --no-verify
