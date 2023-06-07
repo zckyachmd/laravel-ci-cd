@@ -16,7 +16,7 @@ jobs:
           php-version: "8.1"
 
       - name: Install dependencies
-        run: composer install --no-progress --prefer-dist
+        run: composer install --no-progress --prefer-dist --dev
 
       - name: Run PHP_CodeSniffer
-        run: vendor/bin/phpcs --standard=phpcs.xml
+        run: vendor/bin/phpcbf --standard=phpcs.xml
