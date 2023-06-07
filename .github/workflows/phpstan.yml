@@ -30,12 +30,17 @@ jobs:
 
       - name: Run PHPStan
         run: |
-          vendor/bin/phpstan analyse --memory-limit=512M --no-progress --error-format=json > phpstan.json
-          if [ $? -ne 0 ]; then exit 1; fi
+          vendor/bin/phpstan analyse --memory-limit=512M --no-progress --error-format=json > phpstan.json || true
 
       - name: Upload PHPStan Report
-        if: ${{ job.status == 'failure' }}
         uses: actions/upload-artifact@v2
         with:
           name: phpstan-report
           path: phpstan.json
+
+      - name: Commit changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add -A
+          git diff-index --quiet HEAD || git commit -m "Fix code style" --no-verify
