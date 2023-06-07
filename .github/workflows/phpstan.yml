@@ -1,15 +1,16 @@
 name: PHP Static Analysis
 
-on:
-  push:
-    branches:
-      - master
-      - develop
-      - "release/**"
-      - "hotfix/**"
-  pull_request:
-    branches:
-      - main
+on: [push, pull_request]
+# on:
+#   push:
+#     branches:
+#       - master
+#       - develop
+#       - "release/**"
+#       - "hotfix/**"
+#   pull_request:
+#     branches:
+#       - main
 
 jobs:
   phpstan:
