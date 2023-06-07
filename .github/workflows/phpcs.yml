@@ -1,6 +1,15 @@
-name: PHP_CodeSniffer
+name: PHP Code Style Fixer
 
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - master
+      - develop
+      - "release/**"
+      - "hotfix/**"
+  pull_request:
+    branches:
+      - main
 
 jobs:
   phpcs:

@@ -1,0 +1,23 @@
+includes:
+    - ./vendor/nunomaduro/larastan/extension.neon
+
+parameters:
+
+    # The level 9 is the highest level
+    level: 7
+
+    paths:
+        - ./app
+        - ./tests
+
+    ignoreErrors:
+        - '#PHPDoc tag @var#'
+        - '#Unsafe usage of new static\(\)#'
+        - '#Call to an undefined method (.+)::(.+)\(\)#'
+
+    parallel:
+        maximumNumberOfProcesses: 4
+
+    inferPrivatePropertyTypeFromConstructor: true
+    noUnnecessaryCollectionCall: false
+    checkMissingIterableValueType: false
